@@ -1,6 +1,6 @@
 defmodule Bson.Decoder do
   defstruct [
-    new_doc: Application.get_env(:bson, :decoder_new_doc, &Bson.Decoder.elist_to_atom_map/1),
+    new_doc: Application.get_env(:bson, :decoder_new_doc, &Bson.Decoder.elist_to_map/1),
     new_bin: Application.get_env(:bson, :decoder_new_bin, &Bson.Bin.new/2)
     ]
   @moduledoc """
